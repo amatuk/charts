@@ -58,7 +58,7 @@ initImage:
   pullPolicy: "Always"
 
 cluster:
-  name: "elasticsearch"
+  name: "elasticsearch-ext"
   # If you want X-Pack installed, switch to an image that includes it, enable this option and toggle the features you want
   # enabled in the environment variables outlined in the README
   xpackEnable: false
