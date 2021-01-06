@@ -1,6 +1,6 @@
 image:
   repository: "docker.elastic.co/kibana/kibana-oss"
-  tag: "6.7.0"
+  tag: "6.8.10"
   pullPolicy: "IfNotPresent"
 
 testFramework:
@@ -35,10 +35,10 @@ envFromSecrets: {}
 files:
   kibana.yml:
     ## Default Kibana configuration from kibana-docker.
-    server.name: kibana
+    server.name: kibana-ext
     server.host: "0"
     ## For kibana < 6.6, use elasticsearch.url instead
-    elasticsearch.hosts: http://elasticsearch:9200
+    elasticsearch.hosts: http://elasticsearch-ext-kubeaddons-client:9200
 
     ## Custom config properties below
     ## Ref: https://www.elastic.co/guide/en/kibana/current/settings.html
